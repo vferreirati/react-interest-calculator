@@ -52,6 +52,8 @@ const Calculator = () => {
     setDuration(value);
   }
 
+  const isResultValid = duration >= 1;
+
   return (
     <>
       <div id="user-input" className="input-group">
@@ -77,7 +79,8 @@ const Calculator = () => {
         />
       </div>
 
-      <ResultTable tableData={tableData} />
+      {isResultValid && <ResultTable tableData={tableData} />}
+      {!isResultValid && <p className='center'>The configuration is invalid</p>}
     </>
   );
 };
