@@ -52,8 +52,6 @@ const Calculator = () => {
     setDuration(value);
   }
 
-  console.log(tableData);
-
   return (
     <>
       <div id="user-input" className="input-group">
